@@ -1,0 +1,85 @@
+.skills {
+    padding-top: 120px;
+    &__subtitle {
+        text-align: center;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translate(-50%);
+            top: -6%;
+        }
+    }
+    &__title {
+        text-align: center;
+        @include divider;
+    }
+    &__wrapper {
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 270px);
+        grid-auto-rows: 270px;
+        gap: 13px 13px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid;
+        transition: transform 0.5s;
+        &:hover {
+            transform: scale(1.05);
+        }
+        .title_fz14 {
+            margin-top: 20px;
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+            margin-top: 15px;
+        }
+    }
+    &__scale-wrapper {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 70px);
+        gap: 30px 45px;
+    }
+    &__scale-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+    &__scale-title {
+        padding-left: 14px;
+        position: relative;
+        @include before_circle; 
+        &:before {
+            top: -35%;
+            left: 0px;
+        }
+    }
+    &__scale-percent {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+        justify-self: end;
+    }
+    &__scale-row {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        grid-column: span 2;
+        align-self: end;
+        span {
+            height: 100%;
+            background-color: $main-color;
+            border-radius: 4px;
+            display: block
+        }    
+    }
+}

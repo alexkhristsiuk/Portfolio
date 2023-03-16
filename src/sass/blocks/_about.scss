@@ -23,6 +23,9 @@
         margin-top: 6px;
         margin-bottom: 4px;
         @include divider;
+        &:after {
+            margin: 0;
+        }
     }
     &__descr {
         font-weight: 500;
